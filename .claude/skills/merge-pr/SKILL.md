@@ -1,7 +1,7 @@
 ---
 name: merge-pr
 user_invocable: true
-description: Merge a problem's GitHub PR after verifying pre-merge conditions (CI green, template-complete body with screenshots, a review with at least one inline comment that has been addressed, clean commit story, README row linked), then pull main so the next problem starts from it. Use when the user says "merge PR #N", "land this", or asks if a PR is ready to merge.
+description: Merge a problem's GitHub PR after verifying pre-merge conditions (CI green, body with all four template sections, a review with at least one inline comment that has been addressed, clean commit story, README row linked), then pull main so the next problem starts from it. Use when the user says "merge PR #N", "land this", or asks if a PR is ready to merge.
 ---
 
 # Merge PR
@@ -21,7 +21,7 @@ gh api repos/aryan-edstem/tdb-vazhipadu-frontend/pulls/<PR>/comments --paginate 
 ```
 Pre-merge checklist for #<PR> (<head> -> main):
 [PASS/FAIL] CI checks green (N/N)
-[PASS/FAIL] Body has all 5 template sections; screenshots render
+[PASS/FAIL] Body has exactly the 4 template sections (Problem, Assumptions, Decisions & trade-offs, How to test)
 [PASS/FAIL] Title "P<N>: ..."; branch feature/p<N>-<slug>; P<N-1> already merged
 [PASS/FAIL] Reviewed: ≥1 inline comment on a specific line
 [PASS/FAIL] Every inline comment answered (follow-up commit or reply)

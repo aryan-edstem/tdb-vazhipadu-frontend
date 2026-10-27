@@ -18,35 +18,36 @@ Follows `.github/pull_request_template.md` exactly — same headings, same order
 
 What this PR solves (1–2 lines).
 
-## Approach
+## Assumptions
 
-How the components and state are organised.
+Gaps in the problem statement you had to fill, and what you decided.
 
 ## Decisions & trade-offs
 
 What you chose, and why over the alternatives.
 
-## Screenshots
-
-UI before/after or a GIF.
-
 ## How to test
 
-Page to open, steps, test files.
+Commands, steps in the UI, test files.
 ```
 
+No other sections — in particular no Approach or Screenshots headings.
+
 - **Problem** — the problem's requirement in 1–2 lines; link `docs/problems/p<N>-<slug>.md`.
-- **Approach** — component tree, where state lives (local / reducer / context / custom hook / URL),
-  data flow through `src/api`. A short bullet list or a tiny tree beats prose.
-- **Decisions & trade-offs** — 2–4 bullets: what was chosen, the alternative, why. **Any change to a
-  mock API signature is explained here** (the brief requires it), as is any new runtime dependency.
-- **Screenshots** — PNGs captured with `pnpm screenshots <route>` and committed under
-  `docs/screenshots/p<N>-*.png` on the branch. Embed with a **commit-SHA raw URL** so the image
-  survives branch deletion:
-  `![Offerings](https://raw.githubusercontent.com/aryan-edstem/tdb-vazhipadu-frontend/<sha>/docs/screenshots/p1-offerings.png)`.
-  Before/after: "before" is the initial/loading state, "after" is the state after interaction.
-- **How to test** — `pnpm dev` -> open `http://localhost:5173/<route>`, numbered steps, and the test
-  files with `pnpm test`.
+- **Assumptions** — one bullet per gap in the statement: the ambiguity, then what was decided
+  (`Search matches offering name only, case-insensitive — the statement doesn't say which fields`).
+  Collected while working (start with the list from `/start-problem`), not reconstructed at the end.
+  If there were genuinely none, say so in one line.
+- **Decisions & trade-offs** — 2–4 bullets: what was chosen, the alternative, why. Where state lives
+  belongs here when it was a real choice. **Any change to a mock API signature is explained here**
+  (the brief requires it), as is any new runtime dependency.
+- **How to test** — commands (`pnpm install`, `pnpm dev`, `pnpm test`), numbered steps in the UI at
+  `http://localhost:5173/<route>` (including how to see the error/retry state — e.g. the failure-rate
+  setting), and the test files that cover the problem.
+
+Screenshots are optional. If one genuinely helps, commit it under `docs/screenshots/p<N>-*.png`
+(`pnpm screenshots <route>`) and embed it in How to test with a commit-SHA raw URL
+(`https://raw.githubusercontent.com/aryan-edstem/tdb-vazhipadu-frontend/<sha>/docs/screenshots/<file>.png`).
 
 ## Review (required before every merge)
 

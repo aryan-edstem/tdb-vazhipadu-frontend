@@ -52,7 +52,7 @@ Must keep matching the brief:
   `getOrders(query)`, `cancelOrder(orderId)`. Domain types (`Temple`, `Offering`, `Order`,
   `OrderQuery`, `Page<T>`, …) in `src/api/types.ts`, exported from `src/api/index.ts`.
 - Data in memory, seeded once: ≥2 temples × 8–10 offerings (name, price, active flag), ~50 orders.
-  Seed is deterministic (fixed data or a seeded PRNG) so screenshots and tests are stable.
+  Seed is deterministic (fixed data or a seeded PRNG) so demos and tests are stable.
 - Every call returns a Promise after a random **200–1000 ms** and fails at a configurable rate
   (**default 10%**) with a typed `ApiError`. Latency and failure rate are configurable
   (e.g. `configureMockApi({ failureRate, latency })`) so tests can set 0% / 0 ms.
@@ -158,4 +158,4 @@ Must keep matching the brief:
 ## Definition of done
 
 All five gates green; requirement + edge cases covered by tests; loading/empty/error states
-handled; screenshots committed; PR body follows the template; mock-API signature changes explained.
+handled; PR body follows the template with its assumptions; mock-API signature changes explained.

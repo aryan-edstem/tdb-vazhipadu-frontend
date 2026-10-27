@@ -32,7 +32,8 @@ feature/p<N>-<slug>  --PR-->  main        (P1 -> P5, strictly in order)
   never `fix` / `changes` / `wip` / `final`. No `Co-Authored-By` trailers.
 - **Exactly one PR per problem** — never open chore/docs/fix PRs. Anything extra rides as a commit
   on the current problem's branch.
-- PR body follows `.github/pull_request_template.md`; screenshots embedded. Every PR gets a review
+- PR body follows `.github/pull_request_template.md` (Problem, Assumptions, Decisions & trade-offs,
+  How to test). Every PR gets a review
   with **at least one inline comment on a specific line**, answered by a follow-up commit or a reply,
   before it merges (merge commit). Then pull `main`.
 

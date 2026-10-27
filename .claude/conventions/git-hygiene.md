@@ -35,7 +35,7 @@ git switch -c feature/p<N>-<slug>
   3. `Render a temple's offerings with loading and error states`
   4. `Add offering search`
   5. `Test offering search and retry`
-  6. `Add offerings list screenshots`
+  6. `Link P1 PR in README`
 - Stage selectively by path (`git add src/features/offerings/hooks/useOfferings.ts`) — never blanket
   `git add -A` / `git add .`.
 - Husky pre-commit runs `lint-staged` (ESLint `--fix --max-warnings=0` + Prettier). Let it run —

@@ -22,7 +22,8 @@ plus the definitions a changed line depends on. Fetch any file with `Read`, sear
 Apply `react-conventions` §"Always flag" adversarially against the changed lines. Weight findings in
 this order; the earliest are most likely to block:
 
-1. **Requirement correctness** — does the UI do what the problem asks, including edge cases?
+1. **Requirement correctness** — does the UI do what the problem asks, including edge cases, and
+   does the code match the decisions stated in the PR's `## Assumptions`?
 2. **Mock API fidelity** — 200–1000 ms latency, configurable failure rate (default 10%), copies not
    references, rules enforced in the API, signature changes explained in the PR.
 3. **Async state correctness** — loading/empty/error + retry, stale responses ignored, effects

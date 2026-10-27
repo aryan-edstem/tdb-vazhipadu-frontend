@@ -17,8 +17,9 @@ the fix, each on its own line.
   and no less (missing behaviour)? The requirements live in `docs/problems/p<N>-<slug>.md`.
 - **Mock API:** still matches `docs/brief.md` (Promise-based, 200–1000 ms latency, configurable
   failure rate defaulting to 10%, seed sizes). Any signature change is explained in the PR body.
-- **PR body:** follows `.github/pull_request_template.md` (Problem, Approach, Decisions & trade-offs,
-  Screenshots, How to test) and is accurate to the diff. Screenshots present and rendering.
+- **PR body:** follows `.github/pull_request_template.md` (Problem, Assumptions, Decisions & trade-offs,
+  How to test) and is accurate to the diff. Assumptions are real gaps with a stated decision, and
+  the code actually follows them; How to test commands and file paths exist.
 - **PR title:** `P<N>: <description>`. **Branch:** `feature/p<N>-<slug>` off `main`.
 - **Commits:** small, meaningful, imperative; none named `fix`/`changes`/`wip`/`final`; no
   `Co-Authored-By`; no secrets.

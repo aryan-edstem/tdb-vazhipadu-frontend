@@ -41,7 +41,7 @@ code.
 `git switch <headRefName> && git pull --ff-only`; merge `origin/main` in if behind (no rebase). Make
 the edits, run `pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build`. One
 commit per addressed comment, message names the change (`Ignore stale offerings response on temple
-switch`), staged by path. Re-capture screenshots if the UI changed. `git push`.
+switch`), staged by path. If a fix changes an assumption or decision, update the PR body (`gh pr edit <PR> --body-file`). `git push`.
 
 ## 5. Reply on each thread
 
