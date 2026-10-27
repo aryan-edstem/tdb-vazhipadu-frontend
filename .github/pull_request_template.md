@@ -2,18 +2,14 @@
 
 What this PR solves (1–2 lines).
 
-## Approach
+## Assumptions
 
-How the components and state are organised.
+Gaps in the problem statement you had to fill, and what you decided.
 
 ## Decisions & trade-offs
 
 What you chose, and why over the alternatives.
 
-## Screenshots
-
-UI before/after or a GIF.
-
 ## How to test
 
-Page to open, steps, test files.
+Commands, steps in the UI, test files.
